@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+    Final Web Project: Barbershop Website
+    Purpose: Design and develop a responsive website for a local barbershop.
+             This project demonstrates proficiency in HTML, CSS, and JavaScript,
+             as well as an understanding of web design principles, accessibility,
+             responsive design, and user experience.
+    Author: Kelsey Torres
+    Last Updated: April 29, 2026
+
+    Filename: index.html
+    -->
+
+    <!-- ================= META / SEO ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Torres Chop Shop – Professional barbers in Muscatine, IA offering haircuts, beard trims, and hair designs. Book your appointment online!">
+    <meta name="keywords" content="barbershop Muscatine, fades, beard trim, haircuts, Torres Chop Shop">
+	<meta name="robots" content="index, follow">
+	<title>Torres Chop Shop | Barbershop in Muscatine, IA</title>
+	<!-- Open Graph (Social Sharing) -->
+	<meta property="og:title" content="Torres Chop Shop | Barbershop in Muscatine, IA">
+	<meta property="og:description" content="Professional barbershop offering fades, beard trims, and grooming services in Muscatine, IA. Book your appointment now!">
+	<meta property="og:image" content="https://torreschopshop.com/images/logo.jpeg">
+	<meta property="og:url" content="https://torreschopshop.com/">
+	<meta property="og:type" content="website">
+	<!-- Canonical URL -->
+    <link rel="canonical" href="https://torreschopshop.com/">
+    
+	<!-- ================= STYLES ================= -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	
+	<!-- ================= STRUCTURED DATA (LOCAL SEO) ================= -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Barbershop",
+	  "name": "Torres Chop Shop",
+	  "url": "https://torreschopshop.com/",
+	  "image": "https://torreschopshop.com/images/logo.jpeg",
+	  "telephone": "563-554-9750",
+	  "priceRange": "$$",
+	  "description": "Professional barbershop in Muscatine, IA specializing in fades, beard trims, and modern grooming.",
+	  "address": {
+	    "@type": "PostalAddress",
+		"streetAddress": "1107 Grandview Ave",
+		"addressLocality": "Muscatine",
+		"addressRegion": "IA",
+		"postalCode": "52761",
+		"addressCountry": "US"
+	  },
+	  "geo": {
+	    "@type": "GeoCoordinates",
+		"latitude": 41.4049,
+		"longitude": -91.0714
+	  },
+	  "openingHours": "Mo-Sa 10:00-18:00",
+	  "sameAs": [
+	    "https://www.facebook.com/p/Torres-Chop-Shop-61583929363474",
+		"https://www.instagram.com/torreschopshop/",
+		"https://www.tiktok.com/@atorreschopshop"
+	  ]
+	}
+	</script>
+</head>
+
+<body>
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- ================= NAVIGATION ================= -->
+    <nav aria-label="Main navigation">
+		<div class="nav-container">
+			<!-- Logo / Brand -->
+            <a href="#home" class="brand logo-brand" aria-label="Go to homepage">
+				<img src="images/logo.png" alt="Torres Chop Shop logo">
+			</a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="primary-navigation">
+				<li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button type="button"
+					class="hamburger"
+					aria-label="Toggle navigation"
+					aria-expanded="false"
+					aria-controls="primary-navigation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</nav>
+	
+	<!-- ================= MAIN CONTENT ================= -->
+	<main id="main-content">
+		
+		<!-- ================= HERO / HOME ================= -->
+		<header id="home">
+			<!-- Background Slider -->
+			<div class="hero-slider">
+				<img src="images/slide1.jpg" class="slide active" alt="Straight razor beard trim">
+				<img src="images/slide2.jpg" class="slide" alt="Barber cutting hair">
+				<img src="images/slide3.jpg" class="slide" alt="Straight razor hair design">
+			</div>
+			<!-- Overlay -->
+			<div class="hero-overlay"></div>
+			<!-- Hero Content -->
+			<div class="hero-content">
+				<h1 class="hero-title fade-up delay-1">
+					Torres <span>Chop Shop</span>
+				</h1>
+				<p class="home-tagline fade-up delay-3">Blessed by TCS</p>
+				<a href="#about" class="hero-cta fade-up delay-4">Select Your Barber</a>
+			</div>
+		</header>
+		
+		<!-- ================= ABOUT ================= -->
+		<section id="about" aria-labelledby="about-title">
+			<h2 id="about-title">Meet the Barbers</h2>
+			<div class="barbers-grid">
+				<!-- Repeatable Barber Card Template -->
+				<a href="https://booksy.com/en-us/1564756_torres-chop-shop_barber-shop_17499_muscatine"
+				   class="barber"
+				   target="_blank"
+				   rel="noopener noreferrer"
+				   aria-label="Book an appointment with Andy">
+					<img src="images/andy.jpeg"
+						 alt="Andy, head barber at Torres Chop Shop in Muscatine"
+						 loading="lazy"
+						 width="300"
+						 height="300">
+					<h3>Andy</h3>
+					<p class="barber-bio">Owner / Head Barber</p>
+					<p class="barber-tag">Fades • Tapers • Lineups</p>
+					<p class="barber-quote">Clean fades. Consistency. Every cut matters.</p>
+					<span class="btn" aria-hidden="true">Book Now</span>
+				</a>
+				
+				<a href="https://booksy.com/en-us/1536351_adonai-sandoval_barber-shop_17499_muscatine"
+				   class="barber"
+				   target="_blank"
+				   rel="noopener noreferrer"
+				   aria-label="Book an appointment with Ado">
+					<img src="images/ado.jpg"
+						 alt="Ado, barber at Torres Chop Shop in Muscatine"
+						 loading="lazy"
+						 width="300"
+						 height="300">
+					<h3>Ado</h3>
+					<p class="barber-bio">Beard Specialist</p>
+					<p class="barber-tag">Beards • Lineups • Hot Towel</p>
+					<p class="barber-quote">Sharp lines. Full beards. No shortcuts.</p>
+					<span class="btn" aria-hidden="true">Book Now</span>
+				</a>
+				
+				<a href="https://booksy.com/en-us/1627382_hair-by-alicia_hair-salon_17499_muscatine"
+				   class="barber"
+				   target="_blank"
+				   rel="noopener noreferrer"
+				   aria-label="Book an appointment with Alicia">
+					<img src="images/alicia.jpg"
+						 alt="Alicia, barber at Torres Chop Shop in Muscatine"
+						 loading="lazy"
+						 width="300"
+						 height="300">
+					<h3>Alicia</h3>
+					<p class="barber-bio">Women's Hair Specialist</p>
+					<p class="barber-tag">Layers • Styling • Color</p>
+					<p class="barber-quote">Modern styles that feel as good as they look.</p>
+					<span class="btn" aria-hidden="true">Book Now</span>
+				</a>
+				
+				<a href="https://booksy.com/en-us/1713658_mike-yblendz_barber-shop_17499_muscatine"
+				   class="barber"
+				   target="_blank"
+				   rel="noopener noreferrer"
+				   aria-label="Book an appointment with Mikey">
+					<img src="images/mikey.jpg"
+						 alt="Mikey, barber at Torres Chop Shop in Muscatine"
+						 loading="lazy"
+						 width="300"
+						 height="300">
+					<h3>Mikey</h3>
+					<p class="barber-bio">Textured Hair Specialist</p>
+					<p class="barber-tag">Curls • Texture • Shape</p>
+					<p class="barber-quote">Natural texture, clean shape, no compromise.</p>
+					<span class="btn" aria-hidden="true">Book Now</span>
+				</a>
+				
+				<a href="https://booksy.com/en-us/1714435_slycedbykev_barber-shop_17499_muscatine"
+				   class="barber"
+				   target="_blank"
+				   rel="noopener noreferrer"
+				   aria-label="Book an appointment with Keven">
+					<img src="images/keven.jpeg"
+						 alt="Keven, barber at Torres Chop Shop in Muscatine"
+						 loading="lazy"
+						 width="300"
+						 height="300">
+					<h3>Keven</h3>
+					<p class="barber-bio">Design Artist</p>
+					<p class="barber-tag">Designs • Freestyle • Detail</p>
+					<p class="barber-quote">Creative cuts with sharp, detailed finish.</p>
+					<span class="btn" aria-hidden="true">Book Now</span>
+				</a>
+			</div>
+		</section>
+		
+		<!-- ================= SERVICES ================= -->
+		<section id="services" class="fade-up" aria-labelledby="services-title">
+			<h2 id="services-title">Services</h2>
+			<div class="services-grid">
+				<div class="service-card" tabindex="0" role="group" aria-label="Men’s haircut service">
+					<div class="price-badge">$23–$30+</div>
+					<img src="images/menscut.jpg" alt="Men's Haircuts" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Men’s Haircut</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Kid’s haircut service">
+					<div class="price-badge">$15–$25+</div>
+					<img src="images/kidscut.jpeg" alt="Kids Haircuts" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Kids Haircut</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Women's services">
+					<div class="price-badge">From $23+</div>
+					<img src="images/womenscut.jpeg" alt="Women's Services" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Women’s Services</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Beard trim service">
+					<div class="price-badge">$13–$20+</div>
+					<img src="images/beardTrim.jpeg" alt="Beard Trim" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Beard Trim / Shaves</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Hot towel service">
+					<div class="price-badge">Price Varies</div>
+					<img src="images/hottowel.jpg" alt="Hot Towel" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Hot Towel / Tints</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Waxing service">
+					<div class="price-badge">$8–$10+</div>
+					<img src="images/waxing.jpg" alt="Waxing" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Waxing</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Hair color service">
+					<div class="price-badge">Starting at $30+</div>
+					<img src="images/hairColor.jpeg" alt="Hair Color" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Hair Color / Highlights</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Perm service">
+					<div class="price-badge">$50–$80+</div>
+					<img src="images/perm.jpg" alt="Perms" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Perms</div>
+					</div>
+				</div>
+					
+				<div class="service-card" tabindex="0" role="group" aria-label="Hair design service">
+					<div class="price-badge">Starting at $25+</div>
+					<img src="images/hairDesign.jpeg" alt="Freestyle Design" loading="lazy">
+					<div class="overlay">
+						<div class="service-name">Freestyle Hair Design</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="services-cta">
+				<p>Ready to get cleaned up? Select your barber to book instantly.</p>
+				<a href="#about" class="services-btn">View Barbers & Book</a>
+			</div>
+		</section>
+		
+		<!-- ================= CONTACT ================= -->
+		<section id="contact" class="fade-up" aria-labelledby="contact-title">
+			<h2 id="contact-title">Contact</h2>
+			<div class="contact-wrapper">
+				<!-- Left Side -->
+				<div class="left-column">
+					<article class="contact-card">
+						<h3 class="contact-title">
+							<i class="fas fa-bolt"></i> Get in Touch
+						</h3>
+						
+						<div class="contact-info">
+							<p><i class="fas fa-map-marker-alt"></i> 1107 Grandview Ave, Muscatine, IA 52761</p>
+							<p><i class="fas fa-phone"></i> <a href="tel:5635549750">563-554-9750</a></p>
+							<p><i class="fas fa-clock"></i> Mon–Sat: 10:00 AM – 6:00 PM</p>
+						</div>
+					
+						<!-- Ranking Badge -->
+						<div class="ranking-badge">
+							<img src="images/ranking.jpg" alt="Ranked #1 Barbershop by Business Rate in February 2026" loading="lazy">
+						</div>
+					</article>
+				</div>
+				
+				<!-- Right Side -->
+				<div class="map-column">
+					<div class="map-container">
+						<iframe
+								title="Torres Chop Shop Location on Google Maps"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.5812710068094!2d-91.07143892412046!3d41.404899071297685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e3fb910acf52b9%3A0x6463dfdc65f68477!2sTorres%20Chop%20Shop!5e0!3m2!1sen!2sus!4v1775758890509!5m2!1sen!2sus"
+								allowfullscreen
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Reviews -->
+			<p class="reviews-label">Based on Google Reviews</p>
+			<div class="reviews-marquee">
+				<div class="reviews-track">
+					<div class="review-card">
+						<div class="stars" role="img" aria-label="Rated 5 out of 5 stars from Google reviews">★★★★★</div>
+						<p>"The best barbershop in Muscatine. 100% recommend."</p>
+						<span>- Rigo X.</span>
+					</div>
+					<div class="review-card">
+						<div class="stars" role="img" aria-label="Rated 5 out of 5 stars from Google reviews">★★★★★</div>
+						<p>"Great prices, wonderful services, and highly talented!"</p>
+						<span>- Eva B.</span>
+					</div>
+					<div class="review-card">
+						<div class="stars" role="img" aria-label="Rated 5 out of 5 stars from Google reviews">★★★★★</div>
+						<p>"The quality of work is always top notch. Highly recommend."</p>
+						<span>- Pablo P.</span>
+					</div>
+					<div class="review-card">
+						<div class="stars" role="img" aria-label="Rated 5 out of 5 stars from Google reviews">★★★★★</div>
+						<p>"I love it here. They are amazing."</p>
+						<span>- April H.</span>
+					</div>
+				</div>
+			</div>
+			
+			<a class="reviews-link"
+			   href="https://www.google.com/search?sca_esv=bab5d0a3aacebeff&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOVy_MWb8TjWJtNp8lwDLhuNId9rsPaM744tE-l-lzOV85Ev0xfQtbq-40mC7hmPLYQHcXZZiXs-YdYlkp6FWR16H5mUPea06RejuqNRHBZTW97kiRw%3D%3D&q=Torres+Chop+Shop+Reviews&sa=X&ved=2ahUKEwi_l7TBl46UAxVhm4kEHZP7MwIQ0bkNegQIPRAF&biw=1536&bih=730&dpr=1.25"
+			   target="_blank"
+			   rel="noopener noreferrer">
+				See All Customer Reviews
+			</a>
+		</section>
+		
+	</main>
+	
+	<!-- ================= FOOTER ================= -->
+	<footer>
+		<p>&copy; 2026 Torres Chop Shop. All rights reserved.</p>
+		
+		<!-- Social Links -->
+		<div class="social-links">
+			<a href="https://www.facebook.com/p/Torres-Chop-Shop-61583929363474"
+			   target="_blank"
+			   rel="noopener noreferrer"
+			   aria-label="Facebook">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+
+            <a href="https://www.instagram.com/torreschopshop/"
+			   target="_blank"
+			   rel="noopener noreferrer"
+			   aria-label="Instagram">
+				<i class="fab fa-instagram"></i>
+			</a>
+
+            <a href="https://www.tiktok.com/@atorreschopshop"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="TikTok">
+				<i class="fab fa-tiktok"></i>
+			</a>
+		</div>
+	</footer>
+	
+	<!-- ================= SCRIPTS ================= -->
+	<script src="script.js"></script>
+</body>
+</html>

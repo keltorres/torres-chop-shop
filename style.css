@@ -859,11 +859,12 @@ h2::after {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	text-align: left;
 }
 
 .contact-info p {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	gap: 12px;
 	margin: 0;
 	padding: 6px 0;
